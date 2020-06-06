@@ -136,6 +136,7 @@ function initTryOk (cfg) {
   const openApi = cfg.openApi
   Redoc.init(openApi, {
     enableConsole: true,
+    ...cfg,
     // scrollYOffset: 50
   }, document.getElementById('redoc-container'), () => {
     initSwagger(cfg)
